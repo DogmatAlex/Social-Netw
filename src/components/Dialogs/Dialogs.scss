@@ -1,0 +1,24 @@
+.dialogs {
+    display: flex;
+    margin: 20px;
+
+    &__items {
+        font-size: 20px;
+    }
+
+    &__messageArea {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            height: 15px;
+        }
+    }
+
+    &__messageButton {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+

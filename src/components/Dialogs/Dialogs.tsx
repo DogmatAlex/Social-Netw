@@ -35,13 +35,13 @@ const Dialogs = () => {
     return (
         <div className="dialogs">
             <div className="dialogs__items">{dialogElement}</div>
-            <div className="dialogs__messageArea">
-                <textarea className="dialogs__messageArea__item" ref={newMessageElement}></textarea>
-                <textarea className="dialogs__messageArea__item" ref={newMessageElement}></textarea>
-                <textarea className="dialogs__messageArea__item" ref={newMessageElement}></textarea>
-                <textarea className="dialogs__messageArea__item" ref={newMessageElement}></textarea>
-                <textarea className="dialogs__messageArea__item" ref={newMessageElement}></textarea>
-                <textarea className="dialogs__messageArea__item" ref={newMessageElement}></textarea>
+            <div className="dialogs__messageInput">
+                <textarea className="dialogs__messageInput__item" ref={newMessageElement}></textarea>
+                <textarea className="dialogs__messageInput__item" ref={newMessageElement}></textarea>
+                <textarea className="dialogs__messageInput__item" ref={newMessageElement}></textarea>
+                <textarea className="dialogs__messageInput__item" ref={newMessageElement}></textarea>
+                <textarea className="dialogs__messageInput__item" ref={newMessageElement}></textarea>
+                <textarea className="dialogs__messageInput__item" ref={newMessageElement}></textarea>
             </div>
             <div className="dialogs__messageButton">
                 <button onClick={sendMessage}>Send</button>

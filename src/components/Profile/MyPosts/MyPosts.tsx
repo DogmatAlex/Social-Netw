@@ -1,16 +1,30 @@
 import React from 'react';
 import './MyPosts.scss';
+import { useState } from 'react';
 import Post from './Post/Post.tsx';
-import state from '../../../redux/state.js';
 
 const MyPosts = () => {
-    let postsElements = state.profilePage.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />);
+    const [posts, setPosts] = useState([]);
 
-    let newPostElement = React.createRef();
+    let postsElements = posts.map(p => <Post title={p.title} likesCount={p.likesCount} />);
 
-    let addPost = () => {
-        let textP = newPostElement.current.value;
-        alert(textP);
+    const initialState = { title: '' }; // Начальное состояние
+    const [formValues, setFormValues] = useState(initialState);
+
+    const onChange = (event: any) => {
+        const key = event.target.name;
+        const value = event.target.value;
+        setFormValues({ ...formValues, [key]: value });
+    };
+
+    const addPost = () => {
+        const newPost = {
+            id: 4,
+            title: formValues.title,
+            likesCount: 0,
+        };
+        setPosts([...posts, newPost]);
+        //alert(formValues.title);
     };
 
     return (
@@ -18,7 +32,7 @@ const MyPosts = () => {
             <h3>My post</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea className="myInput" value={formValues.title} name="title" onChange={onChange} variant="filled"></textarea>
                 </div>
                 <div>
                     <button onClick={addPost}>Add post</button>

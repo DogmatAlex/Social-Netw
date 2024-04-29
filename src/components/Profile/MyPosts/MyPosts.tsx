@@ -22,9 +22,10 @@ const MyPosts = () => {
             id: 4,
             title: formValues.title,
             likesCount: 0,
+            date: new Date(),
         };
-        setPosts([...posts, newPost]);
-        //alert(formValues.title);
+        setPosts([...posts, newPost].sort((a, b) => b.date - a.date));
+        setFormValues({ title: '' }); // Очищаем значение textarea после добавления поста
     };
 
     return (

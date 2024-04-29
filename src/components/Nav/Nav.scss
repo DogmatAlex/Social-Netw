@@ -5,12 +5,13 @@
     flex-direction: column;
     background-color: #81dbfc;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    gap: 20px;
-    padding-left: 30px;
+    padding-top: 20px;
 }
 
 a {
-    display: flex;
+    display: block;
+    margin-bottom: 25px;
+    padding-left: 30px;
     text-decoration: none;
     font-size: 20px;
     transition: 0.2s;

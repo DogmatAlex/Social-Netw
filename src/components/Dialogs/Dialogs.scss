@@ -1,3 +1,8 @@
+.usersList a {
+    display: block;
+    margin-bottom: 10px;
+}
+
 .dialogs {
     display: flex;
     margin: 20px;
@@ -6,17 +11,27 @@
         font-size: 20px;
     }
 
-    &__messageInput {
+    &__message {
         display: flex;
         flex-direction: column;
+        margin-left: 50px;
 
         &__item {
-            height: 15px;
+            height: 120px;
+            font-size: 17px;
+            overflow-y: scroll;   
+        }
+
+        
+        &__input {
+            height: 25px;
+            margin-top: 40px;
         }
     }
 
     &__messageButton {
-        display: flex;
+        display: block;
+        width: 50px;
         flex-direction: column;
     }
 }
